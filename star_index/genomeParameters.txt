@@ -1,0 +1,16 @@
+### STAR   --runMode genomeGenerate   --genomeDir star_index   --genomeFastaFiles chr22_with_ERCC92.fa   
+### GstrandBit 32
+versionGenome	2.7.0d
+genomeFastaFiles	chr22_with_ERCC92.fa 
+genomeSAindexNbases	14
+genomeChrBinNbits	18
+genomeSAsparseD	1
+sjdbOverhang	0
+sjdbFileChrStartEnd	- 
+sjdbGTFfile	-
+sjdbGTFchrPrefix	-
+sjdbGTFfeatureExon	exon
+sjdbGTFtagExonParentTranscript	transcript_id
+sjdbGTFtagExonParentGene	gene_id
+sjdbInsertSave	Basic
+genomeFileSizes	74973184 323750892
