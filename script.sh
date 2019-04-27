@@ -1,18 +1,9 @@
-
+#first indexing: only chromosoe 22 was used. indexing the whole genome toke AGES to run
 star_index=star_index
 mkdir $star_index
 STAR --runMode genomeGenerate --genomeDir star_index --genomeFastaFiles chr22_with_ERCC92.fa
 
-#first indexing
-run1Dir=1pass
-mkdir $run1Dir
-for f1 in $(ls ngs2-assignment-data/ | egrep '.+_1') ;do
- f1=ngs2-assignment-data/$f1
- f2=$(echo "$f1"| sed 's,_1,_2,g')
- STAR --genomeDir $run1Dir --readFilesIn $f1 $f2
-done
-
-#downsample
+#downsize: pick only the top 100K instead of the total reads to be able to make the alignment step in a reasonable time
 for file in $(ls ngs2-assignment-data) ; do seqkit head -n100000 ngs2-assignment-data/$file > downsampled/$file ; done
 #first alignment
 for f1 in $(ls ../downsampled/ | egrep '.+_1') ;do 
