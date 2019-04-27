@@ -1,3 +1,5 @@
+#this is the pipeline that I tried to follow : https://gatkforums.broadinstitute.org/gatk/discussion/3891/calling-variants-in-rnaseq
+
 #first indexing: only chromosoe 22 was used. indexing the whole genome toke AGES to run
 star_index=star_index
 mkdir $star_index
